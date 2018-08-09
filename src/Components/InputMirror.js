@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 const InputMirror = (props) => {
 	return (
     <div>
-			<input value={props.inputValue} />
+			<input value={props.inputValue} onChange={props.inputChanged}/>
 			<p>{props.inputValue}</p>
 			</div>
   );
@@ -19,9 +19,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		inputChanged: () => {
+		inputChanged: (e) => {
+			const action = { type: "INPUT_CHANGE", text: e.target.value}
 			console.log("Charged");
+			dispatch(action);
 		}
 	}
 }
-export default InputMirror;
+export default connect(mapStateToProps, mapDispatchToProps)(InputMirror);

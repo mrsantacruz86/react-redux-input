@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 
 const initialState = {
-  inputValue:""
+  inputValue:"asdfasdfdasf"
 }
 
 const reducer = (state = initialState, action) => {
