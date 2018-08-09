@@ -1,11 +1,11 @@
 import { createStore } from 'redux';
 
 const initialState = {
-  inputValue:"asdfasdfdasf"
+  inputValue:""
 }
 
 const reducer = (state = initialState, action) => {
-  console.log("reducer", action);
+  // console.log("reducer", action);
 
   switch (action.type) {
     case "INPUT_CHANGE":

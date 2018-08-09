@@ -21,7 +21,6 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		inputChanged: (e) => {
 			const action = { type: "INPUT_CHANGE", text: e.target.value}
-			console.log("Charged");
 			dispatch(action);
 		}
 	}
